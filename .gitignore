@@ -1,10 +1,7 @@
-
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-node_modules/
-__pycache__/
-.venv/
-venv/
+node_modules
+dist
+*.local
+.DS_Store
+test-results
+playwright-report
+tests/browser/shots

@@ -1,0 +1,22 @@
+{
+  "name": "bakery-tray-lab",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test:math": "node --import ./tests/register.mjs --experimental-strip-types tests/field_test.ts",
+    "test:sim": "node --import ./tests/register.mjs --experimental-strip-types tests/sim_test.ts",
+    "test:sweep": "node --import ./tests/register.mjs --experimental-strip-types tests/sweep_test.ts",
+    "test": "npm run test:math && npm run test:sim && npm run test:sweep"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^22.20.5",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}
